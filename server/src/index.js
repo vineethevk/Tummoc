@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const connect = require("./config/db");
-const { register,login } = require("./controllers/auth.controller");
+const { register, login } = require("./controllers/auth.controller");
 require("dotenv").config();
 const passport = require("passport");
 require("./config/passport");
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(passport.initialize());
 
 app.post("/register", register);
-app.post("/login",login)
+app.post("/login", login)
 app.get('/protected', passport.authenticate("jwt", { session: false }), (req, res) => {
     return res.status(201).send({
         success: true,
@@ -27,7 +27,7 @@ app.get('/protected', passport.authenticate("jwt", { session: false }), (req, re
 
 
 
-const Port = 9000;
+const Port = process.env.PORT || 9000;
 
 app.listen(Port, async () => {
     try {
