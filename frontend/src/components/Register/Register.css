@@ -1,0 +1,33 @@
+form {
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 30px;
+}
+
+label {
+    font-size: 15px;
+
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#submit {
+    border: none;
+    margin-top: 30px;
+    width: 100%;
+    font-size: 16px;
+    padding: 15px;
+    background-color: teal;
+    color: white;
+    border-radius: 10px;
+}
